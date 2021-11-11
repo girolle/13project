@@ -36,5 +36,5 @@ jobs:
 #    - name: Run server
 #      run: pnpm run start &
     - name: Run test
-      run: ./open-tests/run.sh.x
+      run: bash ./open-tests/run.sh.x
       #run: node open-tests/run.js
