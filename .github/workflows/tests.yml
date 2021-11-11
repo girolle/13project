@@ -25,16 +25,16 @@ jobs:
       if: ${{github.event.repository.private}}
     - name: Get testing lib
       run: set -eu && git clone https://github.com/girolle/open-tests.git
-    - name: Start MongoDB
-      uses: supercharge/mongodb-github-action@1.6.0
-      with:
-        mongodb-version: ${{ matrix.mongodb-version }}
-    - name: Installing pnpm
-      run: npm install -g pnpm
-    - name: Installing Dependencies
-      run: pnpm i -f
-    - name: Run server
-      run: pnpm run start &
+#    - name: Start MongoDB
+#      uses: supercharge/mongodb-github-action@1.6.0
+#      with:
+#        mongodb-version: ${{ matrix.mongodb-version }}
+#    - name: Installing pnpm
+#      run: npm install -g pnpm
+#    - name: Installing Dependencies
+#      run: pnpm i -f
+#    - name: Run server
+#      run: pnpm run start &
     - name: Run test
       run: ./open-tests/run.sh.x
       #run: node open-tests/run.js
